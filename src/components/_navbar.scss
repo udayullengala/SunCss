@@ -1,0 +1,38 @@
+// src/components/_navbar.scss
+@use '../themes/variables' as vars;
+@use 'sass:map';
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: map.get(vars.$colors, "primary");
+  padding: 0.5rem 1rem;
+  color: map.get(vars.$colors, "white");
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: map.get(vars.$font-sizes, "xl");
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.navbar-nav li {
+  margin-left: 1rem;
+}
+
+.navbar-nav a {
+  color: map.get(vars.$colors, "white");
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,37 @@
+// src/components/_modal.scss
+@use '../themes/variables' as vars;
+@use 'sass:map';
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: map.get(vars.$colors, "white");
+  border-radius: map.get(vars.$border-radius, "md");
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: map.get(vars.$shadows, "md");
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

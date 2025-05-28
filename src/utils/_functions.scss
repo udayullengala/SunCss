@@ -1,0 +1,20 @@
+// src/utils/_functions.scss
+
+@use 'sass:math';
+@use 'sass:color';
+@use 'sass:string';
+
+// Get spacing value from scale map
+@function spacing($step) {
+  @return map.get($spacing-scale, $step);
+}
+
+// Darken or lighten color with new syntax (Sass color.adjust)
+@function adjust-color-lightness($color, $percent) {
+  @return color.adjust($color, $lightness: $percent);
+}
+
+// Example: convert px to rem (assuming base 16px)
+@function px-to-rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}

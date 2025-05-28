@@ -1,0 +1,28 @@
+// src/components/_form.scss
+@use '../themes/variables' as vars;
+@use 'sass:map';
+
+input,
+select,
+textarea {
+  font-family: map.get(vars.$fonts, "base");
+  font-size: map.get(vars.$font-sizes, "base");
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: map.get(vars.$border-radius, "sm");
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: map.get(vars.$colors, "primary");
+    box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.3);
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}

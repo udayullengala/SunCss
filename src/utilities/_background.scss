@@ -1,0 +1,10 @@
+// src/utilities/_background.scss
+@use '../themes/variables' as vars;
+
+@each $name, $color in vars.$colors {
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+}
+
+.bg-transparent { background-color: transparent !important; }

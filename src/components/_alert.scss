@@ -1,0 +1,30 @@
+// src/components/_alert.scss
+@use '../themes/variables' as vars;
+@use 'sass:map';
+
+.alert {
+  padding: 1rem;
+  border-radius: map.get(vars.$border-radius, "sm");
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.alert-primary {
+  background-color: map.get(vars.$colors, "primary");
+  color: map.get(vars.$colors, "white");
+}
+
+.alert-success {
+  background-color: map.get(vars.$colors, "success");
+  color: map.get(vars.$colors, "white");
+}
+
+.alert-danger {
+  background-color: map.get(vars.$colors, "danger");
+  color: map.get(vars.$colors, "white");
+}
+
+.alert-warning {
+  background-color: map.get(vars.$colors, "warning");
+  color: map.get(vars.$colors, "white");
+}

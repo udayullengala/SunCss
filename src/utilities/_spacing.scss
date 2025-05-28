@@ -1,0 +1,36 @@
+// src/utilities/_spacing.scss
+@use '../themes/variables' as vars;
+
+@mixin generate-spacing-classes($property) {
+  @each $key, $value in vars.$spacing-scale {
+    .#{$property}-#{$key} {
+      #{$property}: $value !important;
+    }
+  }
+}
+
+// Generate margin classes (m-*)
+@include generate-spacing-classes('margin');
+
+// Generate padding classes (p-*)
+@include generate-spacing-classes('padding');
+
+// Optional: margin-x and margin-y
+@each $key, $value in vars.$spacing-scale {
+  .mx-#{$key} {
+    margin-left: $value !important;
+    margin-right: $value !important;
+  }
+  .my-#{$key} {
+    margin-top: $value !important;
+    margin-bottom: $value !important;
+  }
+  .px-#{$key} {
+    padding-left: $value !important;
+    padding-right: $value !important;
+  }
+  .py-#{$key} {
+    padding-top: $value !important;
+    padding-bottom: $value !important;
+  }
+}

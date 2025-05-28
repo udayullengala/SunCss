@@ -1,0 +1,19 @@
+// src/themes/_colors.scss
+@use './variables' as vars;
+@use 'sass:map';
+
+:root {
+  @each $name, $color in vars.$colors {
+    --color-#{$name}: #{$color};
+  }
+}
+
+// Optional: classes for background colors
+@each $name, $color in vars.$colors {
+  .bg-#{$name} {
+    background-color: var(--color-#{$name}) !important;
+  }
+  .text-#{$name} {
+    color: var(--color-#{$name}) !important;
+  }
+}

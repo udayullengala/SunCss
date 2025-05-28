@@ -1,0 +1,12 @@
+// src/themes/_dark.scss
+@use './variables' as vars;
+@use 'sass:map';
+
+body.dark-mode {
+  background-color: map.get(vars.$colors, "dark");
+  color: map.get(vars.$colors, "light");
+
+  a {
+    color: map.get(vars.$colors, "primary");
+  }
+}

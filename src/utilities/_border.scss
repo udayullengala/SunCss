@@ -1,0 +1,21 @@
+// src/utilities/_border.scss
+@use '../themes/variables' as vars;
+@use 'sass:map';
+
+.border { border: 1px solid #ccc !important; }
+.border-0 { border: none !important; }
+
+@each $name, $radius in vars.$border-radius {
+  .rounded-#{$name} {
+    border-radius: $radius !important;
+  }
+}
+
+.border-primary { border-color: map.get(vars.$colors, "primary") !important; }
+.border-secondary { border-color: map.get(vars.$colors, "secondary") !important; }
+.border-success { border-color: map.get(vars.$colors, "success") !important; }
+.border-danger { border-color: map.get(vars.$colors, "danger") !important; }
+.border-warning { border-color: map.get(vars.$colors, "warning") !important; }
+.border-info { border-color: map.get(vars.$colors, "info") !important; }
+.border-light { border-color: map.get(vars.$colors, "light") !important; }
+.border-dark { border-color: map.get(vars.$colors, "dark") !important; }

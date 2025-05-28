@@ -1,0 +1,39 @@
+// src/utilities/_text.scss
+
+@use '../variables' as *;
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.font-sm {
+    font-size: map-get($font-sizes, sm);
+}
+
+.font-base {
+    font-size: map-get($font-sizes, base);
+}
+
+.font-lg {
+    font-size: map-get($font-sizes, lg);
+}
+
+.font-xl {
+    font-size: map-get($font-sizes, xl);
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-normal {
+    font-weight: normal;
+}

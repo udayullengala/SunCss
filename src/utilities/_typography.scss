@@ -1,0 +1,22 @@
+// src/utilities/_typography.scss
+@use '../themes/variables' as vars;
+@use 'sass:map';
+
+.text-xs { font-size: map.get(vars.$font-sizes, "xs") !important; }
+.text-sm { font-size: map.get(vars.$font-sizes, "sm") !important; }
+.text-base { font-size: map.get(vars.$font-sizes, "base") !important; }
+.text-lg { font-size: map.get(vars.$font-sizes, "lg") !important; }
+.text-xl { font-size: map.get(vars.$font-sizes, "xl") !important; }
+.text-2xl { font-size: map.get(vars.$font-sizes, "2xl") !important; }
+.text-3xl { font-size: map.get(vars.$font-sizes, "3xl") !important; }
+.text-4xl { font-size: map.get(vars.$font-sizes, "4xl") !important; }
+.text-5xl { font-size: map.get(vars.$font-sizes, "5xl") !important; }
+
+.text-primary { color: map.get(vars.$colors, "primary") !important; }
+.text-secondary { color: map.get(vars.$colors, "secondary") !important; }
+.text-success { color: map.get(vars.$colors, "success") !important; }
+.text-danger { color: map.get(vars.$colors, "danger") !important; }
+.text-warning { color: map.get(vars.$colors, "warning") !important; }
+.text-info { color: map.get(vars.$colors, "info") !important; }
+.text-light { color: map.get(vars.$colors, "light") !important; }
+.text-dark { color: map.get(vars.$colors, "dark") !important; }

@@ -1,0 +1,30 @@
+// src/components/_card.scss
+@use '../themes/variables' as vars;
+@use 'sass:map';
+
+.card {
+  background-color: map.get(vars.$colors, "white");
+  border-radius: map.get(vars.$border-radius, "md");
+  box-shadow: map.get(vars.$shadows, "sm");
+  padding: 1rem;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  font-weight: 700;
+  font-size: map.get(vars.$font-sizes, "lg");
+  margin-bottom: 0.5rem;
+}
+
+.card-body {
+  flex-grow: 1;
+}
+
+.card-footer {
+  margin-top: 1rem;
+  text-align: right;
+  font-size: map.get(vars.$font-sizes, "sm");
+  color: map.get(vars.$colors, "secondary");
+}

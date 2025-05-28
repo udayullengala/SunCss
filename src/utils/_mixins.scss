@@ -1,0 +1,45 @@
+// src/utils/_mixins.scss
+
+@use 'sass:map';
+@use 'sass:meta';
+
+// Media queries based on breakpoints from variables
+@use '../themes/variables' as vars;
+
+@mixin respond-to($breakpoint) {
+  $breakpoint-value: map.get(vars.$breakpoints, $breakpoint);
+
+  @if $breakpoint-value {
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint `#{$breakpoint}`.";
+  }
+}
+
+// Center element horizontally and vertically
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Simple clearfix
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Border radius from map
+@mixin border-radius($size) {
+  $radius: map.get(vars.$border-radius, $size);
+  @if $radius != null {
+    border-radius: $radius;
+  } @else {
+    @warn "Unknown border-radius size `#{$size}`.";
+  }
+}

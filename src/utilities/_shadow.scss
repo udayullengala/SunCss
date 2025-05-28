@@ -1,0 +1,10 @@
+// src/utilities/_shadow.scss
+@use '../themes/variables' as vars;
+
+@each $name, $shadow in vars.$shadows {
+  .shadow-#{$name} {
+    box-shadow: $shadow !important;
+  }
+}
+
+.shadow-none { box-shadow: none !important; }
