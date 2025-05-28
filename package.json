@@ -1,6 +1,6 @@
 {
   "name": "suncss",
-  "version": "1.0.4",
+  "version": "1.0.8",
   "description": "A modern utility-first CSS framework",
   "main": "dist/suncss.css",
   "scripts": {
