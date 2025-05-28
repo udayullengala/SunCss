@@ -1,6 +1,9 @@
 // src/suncss.scss
 
-@use './themes/variables' as vars;
+@use './themes/variables';
+@use './themes/colors';
+@use './themes/dark';
+
 @use './utils/functions';
 @use './utils/mixins';
 @use './base/index';

@@ -2,6 +2,31 @@
 @use '../themes/variables' as vars;
 @use 'sass:map';
 
+body {
+  font-family: map.get(vars.$fonts, "base");
+  font-size: map.get(vars.$font-sizes, "base");
+  line-height: 1.6;
+  color: map.get(vars.$colors, "dark");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: map.get(vars.$fonts, "heading");
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+h1 { font-size: map.get(vars.$font-sizes, "5xl"); }
+h2 { font-size: map.get(vars.$font-sizes, "4xl"); }
+h3 { font-size: map.get(vars.$font-sizes, "3xl"); }
+h4 { font-size: map.get(vars.$font-sizes, "2xl"); }
+h5 { font-size: map.get(vars.$font-sizes, "xl"); }
+h6 { font-size: map.get(vars.$font-sizes, "lg"); }
+
+p {
+  margin-bottom: 1rem;
+}
+
+
 .text-xs { font-size: map.get(vars.$font-sizes, "xs") !important; }
 .text-sm { font-size: map.get(vars.$font-sizes, "sm") !important; }
 .text-base { font-size: map.get(vars.$font-sizes, "base") !important; }

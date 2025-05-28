@@ -1,4 +1,3 @@
-// src/components/_button.scss
 @use '../themes/variables' as vars;
 @use 'sass:map';
 @use 'sass:color';
@@ -16,28 +15,30 @@
   border: 1px solid transparent;
 }
 
-.btn-primary {
-  background-color: map.get(vars.$colors, "primary");
-  color: map.get(vars.$colors, "white");
-  border-color: map.get(vars.$colors, "primary");
+// Mixin for variant buttons
+@mixin button-variant($name) {
+  $bg: map.get(vars.$colors, $name);
+  $text-color: if($name == "light", map.get(vars.$colors, "dark"), map.get(vars.$colors, "white"));
 
-  &:hover {
-    $hover-color: color.adjust(map.get(vars.$colors, "primary"), $lightness: -10%);
-    background-color: $hover-color;
-    border-color: $hover-color;
+  .btn-#{$name} {
+    background-color: $bg;
+    color: $text-color;
+    border-color: $bg;
+
+    &:hover {
+      $hover: color.adjust($bg, $lightness: -10%);
+      background-color: $hover;
+      border-color: $hover;
+    }
   }
 }
 
-.btn-secondary {
-  background-color: map.get(vars.$colors, "secondary");
-  color: map.get(vars.$colors, "white");
-  border-color: map.get(vars.$colors, "secondary");
-
-  &:hover {
-    $hover-color: color.adjust(map.get(vars.$colors, "secondary"), $lightness: -10%);
-    background-color: $hover-color;
-    border-color: $hover-color;
-  }
-}
-
-/* Add more variants (success, danger, warning) similarly */
+// Generate all button variants
+@include button-variant("primary");
+@include button-variant("secondary");
+@include button-variant("success");
+@include button-variant("danger");
+@include button-variant("warning");
+@include button-variant("info");
+@include button-variant("light");
+@include button-variant("dark");

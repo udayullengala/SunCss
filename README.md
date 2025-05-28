@@ -1,6 +1,6 @@
 # SunCSS ☀️
 
-A lightweight, customizable SCSS utility-first CSS framework inspired by Tailwind CSS and Bootstrap.
+A lightweight, customizable SCSS utility-first CSS framework
 
 ---
 
